@@ -1,0 +1,50 @@
+{% extends "question_base.html" %}
+
+{% block content %}
+		    <div class="row">
+		    	<h1 class="header">Log In</h1>
+		    </div>
+            {# <div class="row" id="wrong_pass"> #}
+                {# <p><b>Sorry, wrong password!</b></p> #}
+            {# </div> #}
+           <form method="POST">
+		    {% csrf_token %}
+		    <div class="subject">
+			    <div class="row">
+			    	<div class="col-sm-2" id="form_field">
+			    		<b><big>Login</big></b>
+			    	</div>
+			    	<div class="col-sm-4">
+    					<div class="input-group">
+    						{{form.login}}
+    					  {#<input type="text" class="form-control" id="title_form-control" placeholder="Enter your login here">#}
+    					</div>
+			    	</div>
+                    {# <div class = "col-sm-4"> #}
+                        {#<div class="row" id="wrong_pass">#}
+                        {#<b>Sorry, this email is allready in use!</b>#}
+                        {#</div>#}
+                    {#</div> #}
+		   		</div>
+		    </div>
+		    <div class="subject">
+			    <div class="row" >
+			    	<div class="col-sm-2" id="form_field">
+			    		<b><big>Password</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+					<div class="input-group">
+							{{ form.password }}
+					  {#<input type="text" class="form-control" id="title_form-control">#}
+					</div>
+
+                    <div class="btn-toolbar">
+                      <button type="submit" class="btn btn-2f" id="ask_button">Log in!</button>
+                    </div>
+
+                    <p><a href="{% url 'register'%}"><b><u>create new account</u></b></a></p>
+			         </div>
+		   	    </div>
+		    </div>
+		    </form>
+{% endblock content %}

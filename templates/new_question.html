@@ -1,0 +1,49 @@
+{% extends "question_base.html" %}
+
+{% block content %}
+ <div class="row">
+		    	<h1 class="header">New Question</h1>
+		    </div>
+		    <div class="subject">
+			    <div  class="row">
+			    	<div class="col-sm-2" >
+			    		<b><big>Title</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+					<div class="input-group">
+					  <input type="text" class="form-control" id="new_question_form-control" placeholder="What is your question?">
+					</div>
+			    	</div>
+		   		</div>
+		    </div>
+
+            <div class="subject">
+                <div  class="row">
+                    <div class="col-sm-2" >
+                        <b><big>Text</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="text_field">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" >
+                        <b><big>Tags</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="new_question_form-control">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-toolbar">
+              <button type="submit" class="btn btn-2f" id="ask_button">Ask!</button>
+            </div>
+{% endblock content %}

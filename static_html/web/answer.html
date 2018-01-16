@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">	
+<head>
+    <title>AskParpibaev/answer</title>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <style type="text/css">
+    	.navbar-brand {
+    		margin-top: -30px;
+    	}
+    	.header{
+    		padding-bottom: 10px;
+    		padding-left: 15px;
+    		display: inline-block;
+    	}
+    	.header_second{
+    		padding-left: 20px;
+    		display: inline-block;
+    	}
+    	.raiting {
+    		margin: 5px 5px 5px 5px;
+    	}
+        .answer {
+            margin-bottom: 20px;
+            border: 3px solid #000000;
+            border-radius: 4px;
+        }
+        .answer_body {
+            margin-top: 20px;
+        }
+        .answer_info {
+            text-align: center;
+            margin-left: -20px;
+            margin-bottom: 20px; 
+        }
+        .answer_img{
+            margin: 5px 5px 5px 5px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question_body {
+            margin-top: -20px;
+        }
+        .question_info{
+        	margin-left: -20px;
+            margin-right: 20px;
+        }
+        .question_img{
+        	margin: 0px 0px 10px 0px;
+            width: 110px;
+            height: 110px;
+        }
+        .navbar_img{
+        	width:42px;
+        	height:42px;
+        	margin-right:10px;
+        }
+        #avatar_navbar{
+        	margin:7px 8px 0px 0px;
+        }
+
+        .tegs_body{
+        	display: inline-block;
+        	white-space: pre-wrap;
+        }
+        li{
+        	list-style-type: none;
+        }
+        ul{
+        	padding-left: 0px;
+        	margin-left: -10px;
+        }
+        #right_side {
+        	padding-left:70px;
+        }
+        #btn_raiting {
+            max-height: 20px;
+        }
+        #Correct {
+            margin-top: 70px;
+
+        }
+        #correct_btn {
+            width: 20px;
+            height: 20px;
+        }
+        #Red {
+            color: #ff0000;
+        }
+        #Green{
+            color: #008000;
+        }
+        #Orange{
+            color: #ffa500;
+        }
+        #nav_search {
+            width: 400px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="container">
+    <nav class="navbar navbar-default nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header"">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><h1>AskParpibaev</h1></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" id="nav_search">
+        </div>
+        <button type="submit" class="btn btn-success">Ask!</button>
+      </form>
+      <div class="navbar-right" id="avatar_navbar">
+      	<div class="navbar-left">
+      		<div class="navbar_img">
+            <a href="#">
+      		<img  alt="72x72" src="static/image/avatar.png" class="img-thumbnail" >
+      		</div>
+            </a>
+      	</div>
+        <div  class="navbar-right">Dr. Pepper <p><a href="settings.html">Settings</a>   <a href="login.html">Log out</a></p></div>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    
+
+
+    <div class="row">
+        <div class="col-sm-9 left_side">
+            <div class="question">
+                    <div class="col-sm-2 question_info">
+                    		<a href="#">
+                    		<img src="static/image/avatar.png" alt="72x72" class="img-thumbnail question_img">
+                    		</a>
+                    	<div class="raiting">
+                    		5	
+                    		<div class="btn-group btn-group-vertical" >
+	                			<button type="submit" class="btn btn-default" id="btn_raiting">^</button>
+	                			<button type="submit" class="btn btn-default" id="btn_raiting"></button>
+	                		</div>
+	                	</div>
+ 					</div>
+ 						<div class="row">
+	                    <div class="col-sm-8 question_body">
+	                    <h2>How to build a moon park ?</h2>
+	                    <p>Guys, i have trouble with a moon park.
+		                		Can't find th black-jack...</p>
+
+	                		<p>Tags: <a> black-jack</a> <a> bender </a></p>
+	                	</div>
+	                	</div>
+            </div>
+            <div class="answer">
+                    <div class="col-sm-2 answer_info">
+                            <a href="#">
+                            <img src="static/image/avatar.png" alt="72x72" class="img-thumbnail answer_img">
+                            </a>
+                        <div class="raiting">
+                            5   
+                            <div class="btn-group btn-group-vertical" >
+                                <button type="submit" class="btn btn-default" id="btn_raiting">^</button>
+                                <button type="submit" class="btn btn-default" id="btn_raiting"></button>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                        <div class="col-sm-8 answer_body">
+                        <p>Guys, i have trouble with a moon park.
+                                Can't find th black-jack...</p>
+                            <div id="Correct">
+                            <button class="glyphicon glyphicon-ok" id="correct_btn"></button>Correct!
+                            </div>
+                        </div>
+                        </div>
+            </div>
+            <div class="answer">
+                    <div class="col-sm-2 answer_info">
+                    		<a href="#">
+                    		<img src="static/image/avatar.png" alt="72x72" class="img-thumbnail answer_img">
+                    		</a>
+                        <div class="raiting">
+                            5   
+                            <div class="btn-group btn-group-vertical" >
+                                <button type="submit" class="btn btn-default" id="btn_raiting">^</button>
+                                <button type="submit" class="btn btn-default" id="btn_raiting"></button>
+                            </div>
+                        </div>
+ 					</div>
+ 						<div class="row">
+    	                    <div class="col-sm-8 answer_body">
+    	                    <p>Guys, i have trouble with a moon park.
+    		                	Can't find th black-jack...</p>
+                            <div id="Correct">
+                            <button class="glyphicon glyphicon-ok" id="correct_btn"></button>Correct!
+                            </div>
+                            </div>
+	                	</div>
+            </div>
+            <div class="your_answer">
+                
+            </div>
+        </div>
+        <div class="col-sm-3" id="right_side">
+        	<div class="row">
+            	<h1>Popular Tags</h1>
+            </div>
+            <div class="row tegs_body"><a href="#"><b>perl</b></a>  <a id="Red" href="#"><big> python</big></a>  <a href="#"><b>TechnoPark</b></a></p><p><a id="Red" href="#"><b><big>MySQL</big></b></a>  <a id="Green" href="#"><b>django</b></a></p><p><a href="#"><b><big>Mail.Ru</big></b></a>  <a href="#"><b><big>Voloshin</big></b></a> <a id="Orange" href="#"><b>Firefox</b></a></p>
+            </div>
+            <div class="row">
+            	<h1>Best Members</h1>
+            </div>
+            <ul class="best_body">
+            	<li><a href="#"><u><big>Mr. Freeman</big></u></a></li>
+            	<li><a href="#"><u><big>Dr. House</big></u></a></li>
+            	<li><a href="#"><u><big>Bender</big></u></a></li>
+            	<li><a href="#"><u><big>Queen Victoria</big></u></a></li>
+            	<li><a href="#"><u><big>Doctor Who</big></u></a></li>
+            	<li><a href="#"><u>Commander Shepard</u></a></li>
+            	<li><a href="#"><u>Kenny</u></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

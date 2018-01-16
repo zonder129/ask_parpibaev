@@ -1,0 +1,70 @@
+{% extends "question_base.html" %}
+
+{% block content %} 
+			{%for f in form%}
+			<div class="row">
+		    	<h1 class="header">Settings: Dr.Pepper</h1>
+		    </div>
+		    <div class="subject">
+			    <div class="row">
+			    	<div class="col-sm-2" id="settings_form_field">
+			    		<b><big>{{f.label_tag}}</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+					<div class="input-group">
+					{{f}}
+					  <input type="text" class="form-control" id="title_form-control" placeholder="dr.pepper">
+					</div>
+			    	</div>
+		   		</div>
+		    </div>
+		    {%endfor%}
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" id="settings_form_field">
+                        <b><big>Email</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="Email" class="form-control" id="title_form-control" placeholder="dr.pepper@mail.ru">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" id="settings_form_field">
+                        <b><big>NickName</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="title_form-control" placeholder="Dr.Pepper">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+		    <div class="subject">
+			    <div class="row" >
+			    	<div class="col-sm-2" id="settings_form_field">
+			    		<b><big>Upload Avatar</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+                            <a href="#">
+                            {% load static %}
+                           <img src="{% static "/image/avatar.png" %}" alt="Avatar" class="img-thumbnail question_img">
+                            </a>
+        					<div class="input-group">
+        					  <input type="text" class="form-control" id="upload_form-control">
+                               <span class="input-group-btn">
+                               <button type="submit" class="btn btn-default" id="choose_button">choose</button>
+                               </span>
+        					</div>
+                            <div class="btn-toolbar">
+                              <button type="submit" class="btn btn-2f" id="ask_button">Save</button>
+                            </div>
+			    	</div>
+		   		</div>
+		    </div>
+{% endblock content %}

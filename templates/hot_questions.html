@@ -1,0 +1,57 @@
+{% extends "question_base.html" %}
+
+{% block content %}
+          <div class="row">
+                            <h1 class="header">Hot Questions</h1>
+                            <a class="header_second" href="{% url 'question_list'%}"><h3>New Questions</h3></a>
+            </div>
+    {% for q in questions %}
+            <div class="question">
+                    <div class="col-sm-2 question_info">
+                            <a href="#">
+                            {% load static %}
+                            <img src="{% static "/image/avatar.png" %}" alt="Avatar" class="img-thumbnail question_img">
+                            </a>
+                        <div class="raiting">
+                            {{q.rating}}    
+                            <div class="btn-group" >
+                                <button type="submit" class="btn btn-default" id="btn_raiting"><div id="btn_inside">+</div></button>
+                                <button type="submit" class="btn btn-default" id="btn_raiting">
+                                <div id="btn_inside">-</button>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                        <a href="{% url 'question_detail' q.id %}"><h4>{{q.title}}</h4></a>
+                        <p>{{q.text}}</p>
+                            <p><a> answer(3) </a> Tag:
+                            <a href='#'>{{q.tag}}</a> Author:
+                            <a> {{q.author}} </a></p>
+                        </div>
+                        </div>
+            </div>
+    {% endfor %}
+        {% if questions.has_other_pages %}
+                <ul class="pagination">
+            {% if questions.has_previous %}
+                <li><a href="?{{ get_parameters }}page={{ questions.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+                <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in questions.paginator.page_range %}
+                {% if questions.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                    <li><a href="?{{ get_parameters }}page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if questions.has_next %}
+                <li><a href="?{{ get_parameters }}page={{ questions.next_page_number }}">&raquo;</a></li>
+            {% else %}
+                <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+            </ul>
+        {% endif %}
+{% endblock content %}
+

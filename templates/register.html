@@ -1,0 +1,35 @@
+{% extends "question_base.html" %}
+
+{% block content %}
+			<form enctype="multipart/form-data" action="" method="post">
+			{%csrf_token%}
+			<div class="row">
+		    	<h1 class="header">Registration</h1>
+		    </div>
+		    {%for k, error in form.errors.items%}
+		    	{{error|escape}}
+		    {%endfor%}
+            {# <div class="row" id="wrong_pass"> #}
+                {# <p><b>Sorry, this email address is allready registred!</b></p> #}
+            {# </div> #}
+		    {%for f in form%}
+		    <div class="subject">
+			    <div class="row">
+			    	<div class="col-sm-2" id="settings_form_field">
+			    		<b><big>{{f.label_tag}}</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+					<div class="input-group">
+					 {{f}}
+					  {# <input type="text" class="form-control" id="title_form-control" placeholder="Enter your login here"> #}
+					</div>
+			    	</div>
+		   		</div>
+		    </div>
+		    {%endfor%}               
+            <div class=" btn-toolbar" style="margin: -10px 140px">
+              <button type="submit" class="btn btn-2f" id="ask_button">Register</button>
+            </div>
+            </form>
+        
+{% endblock content %}

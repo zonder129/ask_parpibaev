@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Ask_Parpibaev</title>
+        {% block header %}
+            {% block style %}
+     {% load static %}           
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/questions.css'%}">
+
+            {% endblock style %}
+
+            {% block js %}
+            {% endblock js %}
+        {% endblock header %}
+    </head>
+
+<body class="container">
+    <nav class="navbar navbar-default nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header"">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'question_list'%}"><h1>AskParpibaev</h1></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" id="nav_search">
+        </div>
+        <button type="submit" class="btn btn-success">Ask!</button>
+      </form>
+      <div class="navbar-right" id="avatar_navbar">
+        <div class="navbar-left">
+            <div class="navbar_img">
+            <a href="{% url 'settings'%}">
+             {% load static %}
+            <img  alt="72x72" src="{% static "image/avatar.png" %}" class="img-thumbnail" >
+            </div>
+            </a>
+        </div>
+        <div  class="navbar-right">Dr. Pepper <p><a href="../settings">Settings</a>   <a href="{% url 'register'%}">Log out</a></p></div>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row">
+    <div class="col-sm-9 left_side">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <div class="col-sm-3" id="right_side">
+            <div class="row">
+                <h1>Popular Tags</h1>
+            </div>
+            <div class="row tags_body"><a href="#"><b>perl</b></a>  <a id="Red" href="#"><big> python</big></a>  <a href="#"><b>TechnoPark</b></a></p><p><a id="Red" href="#"><b><big>MySQL</big></b></a>  <a id="Green" href="#"><b>django</b></a></p><p><a href="#"><b><big>Mail.Ru</big></b></a>  <a href="#"><b><big>Voloshin</big></b></a> <a id="Orange" href="#"><b>Firefox</b></a></p>
+            </div>
+            <div class="row">
+                <h1>Best Members</h1>
+            </div>
+            <ul class="best_body">
+                <li><a href="#"><u><big>Mr. Freeman</big></u></a></li>
+                <li><a href="#"><u><big>Dr. House</big></u></a></li>
+                <li><a href="#"><u><big>Bender</big></u></a></li>
+                <li><a href="#"><u><big>Queen Victoria</big></u></a></li>
+                <li><a href="#"><u><big>Doctor Who</big></u></a></li>
+                <li><a href="#"><u>Commander Shepard</u></a></li>
+                <li><a href="#"><u>Kenny</u></a></li>
+            </ul>
+    </div>
+</div>
+</body>
+</html>

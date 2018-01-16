@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">	
+<head>
+    <title>AskParpibaev/register</title>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <style type="text/css">
+    	.navbar-brand {
+    		margin-top: -30px;
+    	}
+        .navbar_text {
+            margin-top: 15px;
+            margin-right: 82px;
+            white-space: pre-wrap;
+        }
+    	.header{
+    		padding-bottom: 10px;
+    		padding-left: 15px;
+    		display: inline-block;
+    	}
+    	.subject{
+            margin-bottom: 20px;
+            border: 0px solid #a9a9a9;
+            border-radius: 4px;
+    	}
+        .question_info{
+        	text-align: center;
+        }
+        .question_img{
+        	margin: 5px 5px 10px 5px;
+        }
+        .navbar_img{
+        	width:42px;
+        	height:42px;
+        	margin-right:10px;
+        }
+        #lolkek{
+        	margin:7px 8px 0px 0px;
+        }
+
+        .tegs_body{
+        	display: inline-block;
+        	white-space: pre-wrap;
+        }
+        li{
+        	list-style-type: none;
+        }
+        ul{
+        	padding-left: 0px;
+        	margin-left: -10px;
+        }
+        
+        .btn-2f:hover {
+        box-shadow: 4px 0 #000000;
+        left: 2px;
+        }
+        .btn-2f {
+        border-radius: 5px;
+        box-shadow: 6px 0 #000000;
+        }
+        #ask_button {
+            margin:20px 0 20px 5px;
+            border: 5px solid #000000;
+        }
+        #Red {
+            color: #ff0000;
+        }
+        #Green{
+            color: #008000;
+        }
+        #Orange{
+            color: #ffa500;
+        }
+        #title_form-control{
+        	border: 3px solid #000000;
+        }
+        #upload_form-control{
+            max-width: 125px;
+            border: 3px solid #000000;
+        }
+        #right_side {
+        	padding-left:70px;
+        }
+        #form_field {
+        	margin-right:0px;
+        }
+        #form_row {
+        	display: inline-block;
+        }
+        #ask_button {
+        	margin:20px 0 20px 5px;
+        	border: 5px solid #000000;
+        }
+        #choose_button {
+            margin-right:351px;
+            border-radius: 10px;
+        }
+        #wrong_pass {
+            color: #800000;
+            padding-left: 15px;
+            padding-bottom: 20px;
+        }
+        #nav_search {
+            width: 400px;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body class="container">
+    <nav class="navbar navbar-default nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header"">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><h1>AskParpibaev</h1></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" id="nav_search">
+        </div>
+      </form>
+      <div class="navbar_text navbar-right"><a href="login.html"><b><u>log in</u></b></a>    <a href="register.html"><b><u>register</u></b></a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    
+
+
+    <div class="row">
+        <div class="col-sm-9 left_side">
+		    <div class="row">
+		    	<h1 class="header">Registration</h1>
+		    </div>
+            <div class="row" id=wrong_pass>
+                <p><b>Sorry, this email affress allready registred!</b></p>
+            </div>
+		    <div class="subject">
+			    <div class="row">
+			    	<div class="col-sm-2" id="form_field">
+			    		<b><big>Login</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+					<div class="input-group">
+					  <input type="text" class="form-control" id="title_form-control" placeholder="Enter your login here">
+					</div>
+			    	</div>
+		   		</div>
+		    </div>
+
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" id="form_field">
+                        <b><big>Email</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="title_form-control">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" id="form_field">
+                        <b><big>NickName</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="title_form-control">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" id="form_field">
+                        <b><big>Password</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="title_form-control" >
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subject">
+                <div class="row">
+                    <div class="col-sm-2" id="form_field">
+                        <b><big>Repeat passsword</big></b>
+                    </div>
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="title_form-control" >
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+		    <div class="subject">
+			    <div class="row" >
+			    	<div class="col-sm-2" id="form_field">
+			    		<b><big>Upload Avatar</big></b>
+			    	</div>
+			    	<div class="col-sm-8">
+        					<div class="input-group">
+        					  <input type="text" class="form-control" id="upload_form-control">
+                               <span class="input-group-btn">
+                               <button type="submit" class="btn btn-default" id="choose_button">choose</button>
+                               </span>
+        					</div>
+                                
+                           
+                            <div class="btn-toolbar">
+                              <button type="submit" class="btn btn-2f" id="ask_button">Register</button>
+                            </div>
+			    	</div>
+		   		</div>
+		    </div>
+        </div>
+        <div class="col-sm-3" id="right_side">
+        	<div class="row">
+            	<h1>Popular Tags</h1>
+            </div>
+            <div class="row tegs_body"><a href="#"><b>perl</b></a>  <a id="Red" href="#"><big> python</big></a>  <a href="#"><b>TechnoPark</b></a></p><p><a id="Red" href="#"><b><big>MySQL</big></b></a>  <a id="Green" href="#"><b>django</b></a></p><p><a href="#"><b><big>Mail.Ru</big></b></a>  <a href="#"><b><big>Voloshin</big></b></a> <a id="Orange" href="#"><b>Firefox</b></a></p>
+            </div>
+            <div class="row">
+            	<h1>Best Members</h1>
+            </div>
+            <ul class="best_body">
+                <li><a href="#"><u><big>Mr. Freeman</big></u></a></li>
+                <li><a href="#"><u><big>Dr. House</big></u></a></li>
+                <li><a href="#"><u><big>Bender</big></u></a></li>
+                <li><a href="#"><u><big>Queen Victoria</big></u></a></li>
+                <li><a href="#"><u><big>Doctor Who</big></u></a></li>
+                <li><a href="#"><u>Commander Shepard</u></a></li>
+                <li><a href="#"><u>Kenny</u></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
